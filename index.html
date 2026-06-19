@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taprobane Way - Discover Sri Lanka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="#" class="navbar-brand logo fw-bold">Taprobane Way</a>
+
+            <nav class="d-none d-md-flex align-items-center gap-4 custom-nav">
+                <a href="index.html" class="nav-link custom-nav-link active">Home</a>
+                <a href="where-to-go.html" class="nav-link custom-nav-link">Where to Go</a>
+                <a href="what-to-do.html" class="nav-link custom-nav-link">What to Do</a>
+                <a href="explore-trips.html" class="nav-link custom-nav-link">Explore Trips</a>
+                <a href="plan-trip.html" class="nav-link custom-nav-link">Plan Trip</a>
+                <a href="contact.html" class="nav-link custom-nav-link">Contact</a>
+            </nav>
+
+            <a href="explore-trips.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold">Book Now</a>
+        </div>
+    </header>
+
+    <section class="hero d-flex align-items-center justify-content-center position-relative text-center">
+        <!-- Background Video -->
+        <video class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay loop muted playsinline>
+            <source src="videos/Seamless Sri Lanka.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+        <div class="container position-relative z-2 text-white px-3">
+            <h1 class="hero-title fw-bold mb-4" data-aos="fade-up">Discover the Pearl of<br>the Indian Ocean</h1>
+            <p class="hero-subtitle mb-5" data-aos="fade-up" data-aos-delay="100">Experience the raw beauty and serene
+                adventure of Sri Lanka.</p>
+
+            <form class="search-bar d-flex align-items-center p-2 mx-auto rounded-4 shadow-lg" data-aos="zoom-in"
+                data-aos-delay="200">
+                <div class="search-input-group bg-white d-flex align-items-center flex-grow-1 rounded-3 px-3 me-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="text-secondary me-2 flex-shrink-0">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Where to?"
+                        class="form-control border-0 shadow-none bg-transparent px-0 py-3"
+                        aria-label="Search destination">
+                </div>
+                <button type="submit"
+                    class="btn btn-custom-primary rounded-pill px-5 py-3 fw-bold flex-shrink-0">Explore</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="destinations py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4" data-aos="fade-right">
+                <div>
+                    <h2 class="fw-bold mb-1">Explore Destinations</h2>
+                    <p class="text-secondary mb-0">Iconic landscapes waiting for you.</p>
+                </div>
+                <a href="where-to-go.html" class="text-dark fw-bold text-decoration-none"
+                    style="font-size: 0.95rem;">See All
+                    &rarr;</a>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-8" data-aos="fade-up">
+                    <div class="destination-card">
+                        <img src="Images/home/Ella_train.png" alt="Ella">
+                        <div class="card-overlay">
+                            <div class="card-details">
+                                <div class="card-header-info">
+                                    <div>
+                                        <span class="badge-custom">Mountain</span>
+                                        <h3 class="text-white mb-0 mt-1 fw-bold">Ella</h3>
+                                    </div>
+                                    <div class="text-white fw-bold" style="font-size: 0.95rem;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill text-warning me-1 mb-1"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>4.9
+                                    </div>
+                                </div>
+                                <p class="card-description">Embark on a scenic journey through misty mountains, lush tea
+                                    plantations, and the iconic Nine Arch Bridge.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="destination-card">
+                        <img src="Images/home/Galle_fort.png" alt="Galle">
+                        <div class="card-overlay">
+                            <div class="card-details">
+                                <div class="card-header-info">
+                                    <div>
+                                        <span class="badge-custom">Coastal</span>
+                                        <h3 class="text-white mb-0 mt-1 fw-bold">Galle</h3>
+                                    </div>
+                                    <div class="text-white fw-bold" style="font-size: 0.95rem;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill text-warning me-1 mb-1"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>4.8
+                                    </div>
+                                </div>
+                                <p class="card-description">Explore the historic colonial fort, charming cobblestone
+                                    streets, and stunning ocean vistas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="destination-card destination-card-large">
+                        <img src="Images/home/Kandy_city.png" alt="Kandy">
+                        <div class="card-overlay">
+                            <div class="card-details">
+                                <div class="card-header-info">
+                                    <div>
+                                        <span class="badge-custom">Cultural</span>
+                                        <h3 class="text-white mb-0 mt-1 fw-bold">Kandy</h3>
+                                    </div>
+                                    <div class="text-white fw-bold" style="font-size: 0.95rem;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-star-fill text-warning me-1 mb-1"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>4.7
+                                    </div>
+                                </div>
+                                <p class="card-description">Discover the sacred Temple of the Tooth Relic, serene lake
+                                    walks, and rich cultural traditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 mt-5 pt-3" data-aos="fade-right">
+                <h2 class="fw-bold mb-1">Trending Travel Ideas</h2>
+                <p class="text-secondary mb-0">Curated experiences for your next adventure.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="trending-card">
+                        <div class="trending-card-image-wrapper">
+                            <img src="Images/home/Eco_tourism.png" alt="Eco-tourism in Sinharaja">
+                        </div>
+                        <h4 class="fw-bold mb-2">Eco-tourism in Sinharaja</h4>
+                        <p class="text-secondary" style="font-size: 0.95rem;">Immerse yourself in the biodiversity of
+                            the last viable area of primary tropical rainforest in Sri Lanka.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="trending-card">
+                        <div class="trending-card-image-wrapper">
+                            <img src="Images/home/Surfing_Arugambay.png" alt="Surfing in Arugam Bay">
+                        </div>
+                        <h4 class="fw-bold mb-2">Surfing in Arugam Bay</h4>
+                        <p class="text-secondary" style="font-size: 0.95rem;">Catch the perfect wave at one of the
+                            world's most renowned surf destinations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features py-5 mb-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <a href="plan-trip.html" class="feature-card d-block text-center p-4 p-lg-5 h-100 bg-white">
+                        <div
+                            class="icon-circle icon-circle-green mb-4 mx-auto d-flex align-items-center justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-map" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z" />
+                            </svg>
+                        </div>
+                        <h4 class="fw-bold mb-3">Plan Your Trip</h4>
+                        <p class="text-secondary mb-0">Customize your itinerary with our expert tools and local
+                            insights.</p>
+                    </a>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <a href="where-to-go.html" class="feature-card d-block text-center p-4 p-lg-5 h-100 bg-white">
+                        <div
+                            class="icon-circle icon-circle-blue mb-4 mx-auto d-flex align-items-center justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-compass" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                                <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                            </svg>
+                        </div>
+                        <h4 class="fw-bold mb-3">Where to Go</h4>
+                        <p class="text-secondary mb-0">Discover hidden gems and iconic landmarks across the island.</p>
+                    </a>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="what-to-do.html" class="feature-card d-block text-center p-4 p-lg-5 h-100 bg-white">
+                        <div
+                            class="icon-circle icon-circle-brown mb-4 mx-auto d-flex align-items-center justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-person-walking" viewBox="0 0 16 16">
+                                <path
+                                    d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM6.44 3.752A.75.75 0 0 1 7 3.5h1.445c.742 0 1.32.643 1.243 1.38l-.43 4.083a1.8 1.8 0 0 1-.088.395l-.318.906.213.242a.8.8 0 0 1 .114.175l2 4.25a.75.75 0 1 1-1.357.638l-1.956-4.154-1.68-1.921A.75.75 0 0 1 6 8.96l.138-2.613-.435.489-.464 2.786a.75.75 0 1 1-1.48-.246l.5-3a.75.75 0 0 1 .18-.375l2-2.25Z" />
+                                <path
+                                    d="M6.25 11.745v3.414a.75.75 0 1 1-1.5 0v-3.414a2.25 2.25 0 0 1 .23-1.002l1.196-2.155a.75.75 0 0 1 1.312.716l-1.196 2.155a.75.75 0 0 0-.042.286z" />
+                            </svg>
+                        </div>
+                        <h4 class="fw-bold mb-3">What to Do</h4>
+                        <p class="text-secondary mb-0">Find activities that match your adventurous spirit and pace.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-white border-top">
+        <div class="container py-5 mt-4">
+            <div class="row g-4 justify-content-between mb-2">
+                <div class="col-lg-5 col-md-6">
+                    <a href="#" class="footer-brand d-block mb-3 fw-bold">Taprobane Way</a>
+                    <p class="text-secondary pe-lg-5">Crafted for serene adventure. Experience the raw, lush beauty of
+                        Sri Lanka with a sophisticated, contemporary journey.</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <h6 class="footer-heading mb-4 fw-bold text-uppercase">Explore</h6>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-3"><a href="#">Destinations</a></li>
+                        <li class="mb-3"><a href="#">Activities</a></li>
+                        <li><a href="#">Trip Planner</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <h6 class="footer-heading mb-4 fw-bold text-uppercase">Legal</h6>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-3"><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-4">
+            <div class="container text-center text-md-center">
+                <p class="text-secondary mb-0 fw-medium" style="font-size: 0.85rem;">&copy; 2026 Taprobane Way. All
+                    rights reserved. Crafted for serene adventure.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="aos/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>
