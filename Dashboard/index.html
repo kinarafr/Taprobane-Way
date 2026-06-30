@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Taprobane Way</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-mask-layer"></div>
+        <div class="loader-content-wrapper">
+            <div class="loader-lion-container">
+                <div class="lion-silhouette"></div>
+                <div class="lion-fill"></div>
+            </div>
+            <div class="loader-text">Discovering the Pearl of the Indian Ocean</div>
+        </div>
+    </div>
+    
+    <!-- ===== HEADER ===== -->
+    <header class="header py-3 border-bottom bg-white">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="../index.html" class="navbar-brand logo fw-bold">
+                <img src="../Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img">
+                <span class="ms-2 fs-5" style="color: var(--primary-color);">Admin Dashboard</span>
+            </a>
+            
+            <div class="ms-auto me-4"></div>
+            <a href="../index.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold d-none d-md-inline-block">Back to Site</a>
+            <!-- Hamburger Button (Mobile) -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+        <!-- Mobile Drawer -->
+        <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+            <div class="mobile-book-btn">
+                <a href="../index.html" class="btn btn-custom-primary rounded-pill fw-bold">Back to Site</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard-container container">
+        <div class="dashboard-header" data-aos="fade-down">
+            <h1>Recent Submissions</h1>
+            <div class="dashboard-controls">
+                <button class="tab-btn active" id="tab-all">All</button>
+                <button class="tab-btn" id="tab-itineraries">Itineraries</button>
+                <button class="tab-btn" id="tab-messages">Messages</button>
+                <button class="clear-btn" id="clear-records-btn">Clear All</button>
+            </div>
+        </div>
+
+        <div class="dashboard-grid" id="records-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Records will be injected here by app.js -->
+        </div>
+    </main>
+
+    <!-- Custom Cursor elements removed for Dashboard -->
+
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../aos/aos.js"></script>
+    <script src="../mobile-menu.js"></script>
+    <script src="app.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 80 });
+        
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                const navType = performance.getEntriesByType("navigation")[0]?.type;
+                const isFirstVisit = !sessionStorage.getItem('siteVisited');
+                
+                if (navType === 'reload' || isFirstVisit) {
+                    sessionStorage.setItem('siteVisited', 'true');
+                    setTimeout(() => {
+                        loader.classList.add('loader-zoom-out');
+                        setTimeout(() => {
+                            loader.style.display = 'none';
+                        }, 1500); 
+                    }, 2200); 
+                } else {
+                    loader.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

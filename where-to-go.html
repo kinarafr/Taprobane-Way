@@ -29,9 +29,10 @@
 
     <header class="header py-3">
         <div class="container d-flex align-items-center justify-content-between">
-            <a href="index.html" class="navbar-brand logo fw-bold"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
+            <a href="index.html" class="navbar-brand logo fw-bold"><img src="Images/Logo/TW Logo.svg"
+                    alt="Taprobane Way" class="logo-img"></a>
 
-            <nav class="d-none d-md-flex align-items-center gap-4 custom-nav ms-auto me-4">
+            <nav class="d-none d-xl-flex align-items-center gap-4 custom-nav ms-auto me-4">
                 <a href="index.html" class="nav-link custom-nav-link">Home</a>
                 <a href="where-to-go.html" class="nav-link custom-nav-link active">Where to Go</a>
                 <a href="what-to-do.html" class="nav-link custom-nav-link">What to Do</a>
@@ -41,7 +42,29 @@
             </nav>
 
             <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold">Book Now</a>
+            <!-- Hamburger Button (Mobile) -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+        <!-- Mobile Drawer -->
+        <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="where-to-go.html" class="mobile-nav-link active">Where to Go</a>
+            <a href="what-to-do.html" class="mobile-nav-link">What to Do</a>
+            <a href="explore-trips.html" class="mobile-nav-link">Explore Trips</a>
+            <a href="plan-trip.html" class="mobile-nav-link">Plan Trip</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <div class="mobile-book-btn">
+                <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill fw-bold">Book Now</a>
+            </div>
+        </nav>
     </header>
 
     <section class="wtg-hero py-5 text-center mt-3 mb-5">
@@ -63,13 +86,17 @@
                 <!-- Large Card: Mirissa (Beaches) -->
                 <div class="col-lg-8 wtg-card-item" id="mirissa-bay" data-category="beaches" data-aos="fade-up">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="mirissa-bay.html" class="wtg-card text-start position-relative text-decoration-none">
                             <img src="Images/WTG/Mirissa_Coastal.png" alt="Mirissa Bay"
                                 class="w-100 h-100 object-fit-cover">
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
                                     <span
                                         class="badge badge-coastal text-dark fw-bold mb-2 rounded-pill px-3 py-2">Coastal</span>
+                                    <!--
+                                    
+                                    Star Rating
+
                                     <span class="ms-2 text-warning" style="font-size: 0.9rem;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-star-fill me-1" viewBox="0 0 16 16">
@@ -97,17 +124,17 @@
                                                 d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                                         </svg>
                                     </span>
+                                    
+                                    -->
                                 </div>
                                 <h2 class="text-white fw-bold mt-2 mb-2">Mirissa Bay</h2>
-                                <p class="text-white mb-4" style="max-width: 450px; font-size: 0.95rem; opacity: 0.9;">
+                                <p class="text-white mb-0" style="max-width: 450px; font-size: 0.95rem; opacity: 0.9;">
                                     Experience the rhythmic waves and vibrant marine life of the southern coast. A
                                     sanctuary
-                                    for whale watching and endless horizons.</p>
-                                <div>
-                                    <a href="mirissa-bay.html" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    for whale watching and endless horizons.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -115,7 +142,7 @@
                 <div class="col-lg-4 wtg-card-item" id="ella" data-category="hill-country" data-aos="fade-up"
                     data-aos-delay="100">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="ella.html" class="wtg-card text-start position-relative text-decoration-none">
                             <img src="Images/WTG/Ella_Hillcountry.png" alt="Ella" class="w-100 h-100 object-fit-cover">
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -126,23 +153,20 @@
                                 </div>
 
                                 <h3 class="text-white fw-bold mt-2 mb-2">Ella</h3>
-
-
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Breathe in the
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Breathe in the
                                     crisp
-                                    air among endless emerald tea estates and dramatic peaks.</p>
-                                <div>
-                                    <a href="ella.html" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    air among endless emerald tea estates and dramatic peaks.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Vertical Card: Sigiriya (Cultural Triangle) -->
                 <div class="col-lg-4 wtg-card-item" id="sigiriya" data-category="cultural-triangle" data-aos="fade-up">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <img src="Images/WTG/Sigiriya_heritage.png" alt="Sigiriya"
                                 class="w-100 h-100 object-fit-cover">
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
@@ -152,21 +176,21 @@
                                         Triangle</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Sigiriya</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Ascend the ancient
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Ascend the ancient
                                     rock
-                                    fortress, a testament to classical innovation.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    fortress, a testament to classical innovation.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Vertical Card: Yala (Wildlife) -->
-                <div class="col-lg-4 wtg-card-item" id="yala" data-category="wildlife" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4 wtg-card-item" id="yala" data-category="wildlife" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <img src="Images/WTG/Yala_wildlife.png" alt="Yala National Park"
                                 class="w-100 h-100 object-fit-cover">
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
@@ -175,21 +199,20 @@
                                         class="badge badge-wildlife fw-bold text-dark mb-2 rounded-pill px-3 py-2">Wildlife</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Yala National Park</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Encounter the
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Encounter the
                                     elusive
-                                    leopard in its natural, untamed habitat.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    leopard in its natural, untamed habitat.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 5: Unawatuna Beach (Beaches) -->
                 <div class="col-lg-4 wtg-card-item" id="unawatuna" data-category="beaches" data-aos="fade-up">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -197,14 +220,13 @@
                                         class="badge badge-coastal text-dark fw-bold mb-2 rounded-pill px-3 py-2">Beaches</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Unawatuna Beach</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">A crescent of
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    A crescent of
                                     golden sand famous for its calm turquoise waters, cozy beachfront cafes, and lively
-                                    reef diving.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    reef diving.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -212,7 +234,7 @@
                 <div class="col-lg-4 wtg-card-item" id="kandy" data-category="hill-country" data-aos="fade-up"
                     data-aos-delay="100">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="kandy.html" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -220,21 +242,21 @@
                                         Country</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Kandy</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Explore the sacred
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Explore the sacred
                                     lake city, home to the Temple of the Tooth Relic, surrounded by misty hills and lush
-                                    botanical gardens.</p>
-                                <div>
-                                    <a href="kandy.html" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    botanical gardens.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 7: Anuradhapura (Cultural Triangle) -->
-                <div class="col-lg-4 wtg-card-item" id="anuradhapura" data-category="cultural-triangle" data-aos="fade-up">
+                <div class="col-lg-4 wtg-card-item" id="anuradhapura" data-category="cultural-triangle"
+                    data-aos="fade-up">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -243,21 +265,21 @@
                                         Triangle</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Anuradhapura</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Wander through the
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Wander through the
                                     ruins of Sri Lanka's first ancient capital, featuring monumental stupas and the
-                                    sacred Sri Maha Bodhi tree.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    sacred Sri Maha Bodhi tree.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 8: Udawalawe National Park (Wildlife) -->
-                <div class="col-lg-4 wtg-card-item" id="udawalawe" data-category="wildlife" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4 wtg-card-item" id="udawalawe" data-category="wildlife" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -265,21 +287,20 @@
                                         class="badge badge-wildlife text-dark fw-bold mb-2 rounded-pill px-3 py-2">Wildlife</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Udawalawe</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">A thriving
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    A thriving
                                     sanctuary famous for its large herds of Sri Lankan elephants, scenic reservoirs, and
-                                    rehabilitation center.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    rehabilitation center.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 9: Nilaveli Beach (Beaches) -->
                 <div class="col-lg-4 wtg-card-item" id="nilaveli" data-category="beaches" data-aos="fade-up">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -287,14 +308,13 @@
                                         class="badge badge-coastal text-dark fw-bold mb-2 rounded-pill px-3 py-2">Beaches</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Nilaveli Beach</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Bask in the
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Bask in the
                                     pristine, sun-drenched sands of the east coast. A gateway to Pigeon Island National
-                                    Park's vibrant coral reefs.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    Park's vibrant coral reefs.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -302,7 +322,7 @@
                 <div class="col-lg-4 wtg-card-item" id="nuwara-eliya" data-category="hill-country" data-aos="fade-up"
                     data-aos-delay="100">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -310,21 +330,21 @@
                                         Country</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Nuwara Eliya</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Often called
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Often called
                                     'Little England', this cool-climate highland sanctuary is defined by colonial
-                                    estates, waterfalls, and tea factories.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    estates, waterfalls, and tea factories.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 11: Polonnaruwa (Cultural Triangle) -->
-                <div class="col-lg-4 wtg-card-item" id="polonnaruwa" data-category="cultural-triangle" data-aos="fade-up">
+                <div class="col-lg-4 wtg-card-item" id="polonnaruwa" data-category="cultural-triangle"
+                    data-aos="fade-up">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -333,21 +353,21 @@
                                         Triangle</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Polonnaruwa</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Walk among the
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Walk among the
                                     well-preserved monumental ruins, massive reservoirs, and the iconic rock-carved
-                                    Buddha statues of Gal Vihara.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    Buddha statues of Gal Vihara.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 12: Minneriya National Park (Wildlife) -->
-                <div class="col-lg-4 wtg-card-item" id="minneriya" data-category="wildlife" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4 wtg-card-item" id="minneriya" data-category="wildlife" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -355,21 +375,20 @@
                                         class="badge badge-wildlife text-dark fw-bold mb-2 rounded-pill px-3 py-2">Wildlife</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Minneriya</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Witness the
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Witness the
                                     breathtaking 'Gathering' of hundreds of wild elephants around the ancient Minneriya
-                                    tank during the dry season.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    tank during the dry season.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 13: Bentota Beach (Beaches) -->
                 <div class="col-lg-4 wtg-card-item" id="bentota" data-category="beaches" data-aos="fade-up">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -377,14 +396,13 @@
                                         class="badge badge-coastal text-dark fw-bold mb-2 rounded-pill px-3 py-2">Beaches</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Bentota Beach</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Where the river
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Where the river
                                     meets the sea. Renowned for water sports, luxury eco-resorts, and serene mangrove
-                                    boat safaris.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    boat safaris.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -392,7 +410,7 @@
                 <div class="col-lg-4 wtg-card-item" id="haputale" data-category="hill-country" data-aos="fade-up"
                     data-aos-delay="100">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -400,21 +418,20 @@
                                         Country</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Haputale</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Perched on a
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Perched on a
                                     dramatic cliff, Haputale offers breathtaking views of the southern plains and tea
-                                    plantation walks.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    plantation walks.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 15: Dambulla Cave Temple (Cultural Triangle) -->
                 <div class="col-lg-4 wtg-card-item" id="dambulla" data-category="cultural-triangle" data-aos="fade-up">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -423,21 +440,21 @@
                                         Triangle</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Dambulla Cave</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Marvel at the
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Marvel at the
                                     spectacular cave monastery complex housing 153 exquisite Buddha statues and stunning
-                                    ancient mural paintings.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    ancient mural paintings.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Card 16: Wilpattu National Park (Wildlife) -->
-                <div class="col-lg-4 wtg-card-item" id="wilpattu" data-category="wildlife" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4 wtg-card-item" id="wilpattu" data-category="wildlife" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="wtg-filter-wrapper">
-                        <div class="wtg-card text-start position-relative">
+                        <a href="#" class="wtg-card text-start position-relative text-decoration-none">
                             <div class="wtg-card-placeholder"></div>
                             <div class="wtg-card-overlay p-4 p-lg-5 d-flex flex-column justify-content-end">
                                 <div>
@@ -445,14 +462,13 @@
                                         class="badge badge-wildlife text-dark fw-bold mb-2 rounded-pill px-3 py-2">Wildlife</span>
                                 </div>
                                 <h3 class="text-white fw-bold mt-2 mb-2">Wilpattu</h3>
-                                <p class="text-white mb-4" style="font-size: 0.95rem; opacity: 0.9;">Explore Sri Lanka's
+                                <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+                                    Explore Sri Lanka's
                                     largest national park, characterized by a unique network of natural lakes (Villus)
-                                    and rich leopard habitat.</p>
-                                <div>
-                                    <a href="#" class="btn btn-discover">Discover More</a>
-                                </div>
+                                    and rich leopard habitat.
+                                </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -488,29 +504,31 @@
         <div class="container py-5 mt-4">
             <div class="row g-4 justify-content-between mb-2">
                 <div class="col-lg-5 col-md-6">
-                    <a href="#" class="footer-brand d-block mb-3 fw-bold"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
+                    <a href="index.html" class="footer-brand d-block mb-3 fw-bold" id="footer-logo-link"><img
+                            src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
                     <p class="text-secondary pe-lg-5">Crafted for serene adventure. Experience the raw, lush beauty of
                         Sri Lanka with a sophisticated, contemporary journey.</p>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
                     <h6 class="footer-heading mb-4 fw-bold text-uppercase">Explore</h6>
                     <ul class="list-unstyled footer-links mb-0">
-                        <li class="mb-3"><a href="#">Destinations</a></li>
-                        <li class="mb-3"><a href="#">Activities</a></li>
-                        <li><a href="#">Trip Planner</a></li>
+                        <li class="mb-3"><a href="where-to-go.html">Destinations</a></li>
+                        <li class="mb-3"><a href="what-to-do.html">Activities</a></li>
+                        <li><a href="plan-trip.html">Trip Planner</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
                     <h6 class="footer-heading mb-4 fw-bold text-uppercase">Legal</h6>
                     <ul class="list-unstyled footer-links mb-0">
-                        <li class="mb-3"><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li class="mb-3"><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li class="mt-3"><a href="Dashboard/index.html" class="secret-dashboard-link" target="_blank" rel="noopener noreferrer">Admin Dashboard</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-bottom py-4">
-            <div class="container text-center text-md-center">
+            <div class="container text-center">
                 <p class="text-secondary mb-0 fw-medium" style="font-size: 0.85rem;">&copy; 2026 Taprobane Way. All
                     rights reserved. Crafted for serene adventure.</p>
             </div>
@@ -601,17 +619,17 @@
             function handleHashNavigation() {
                 const hash = window.location.hash;
                 if (!hash) return;
-                
+
                 const targetId = decodeURIComponent(hash.substring(1));
                 const targetCard = document.getElementById(targetId);
                 if (!targetCard) return;
 
                 const category = targetCard.getAttribute('data-category');
-                
+
                 // Find and click the correct filter button to ensure the card is visible
-                const filterButton = document.querySelector(`.btn-filter[data-filter="${category}"]`) || 
-                                     document.querySelector('.btn-filter[data-filter="all"]');
-                
+                const filterButton = document.querySelector(`.btn-filter[data-filter="${category}"]`) ||
+                    document.querySelector('.btn-filter[data-filter="all"]');
+
                 if (filterButton && !filterButton.classList.contains('active')) {
                     filterButton.click();
                 }
@@ -619,10 +637,10 @@
                 // Wait for the filter animation (300ms transition) before scrolling
                 setTimeout(() => {
                     targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
+
                     // Add the premium focus/glow effect
                     targetCard.classList.add('highlight-pulse');
-                    
+
                     // Remove highlight after animation completes
                     setTimeout(() => {
                         targetCard.classList.remove('highlight-pulse');
@@ -643,21 +661,22 @@
             if (loader) {
                 const navType = performance.getEntriesByType("navigation")[0]?.type;
                 const isFirstVisit = !sessionStorage.getItem('siteVisited');
-                
+
                 if (navType === 'reload' || isFirstVisit) {
                     sessionStorage.setItem('siteVisited', 'true');
                     setTimeout(() => {
                         loader.classList.add('loader-zoom-out');
                         setTimeout(() => {
                             loader.style.display = 'none';
-                        }, 1500); 
-                    }, 2200); 
+                        }, 1500);
+                    }, 2200);
                 } else {
                     loader.style.display = 'none';
                 }
             }
         });
     </script>
+    <script src="mobile-menu.js"></script>
 </body>
 
 </html>

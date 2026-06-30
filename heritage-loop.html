@@ -36,7 +36,7 @@
         <div class="container d-flex align-items-center justify-content-between">
             <a href="index.html" class="navbar-brand logo fw-bold" id="header-logo-link"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
 
-            <nav class="d-none d-md-flex align-items-center gap-4 custom-nav ms-auto me-4" id="main-navigation-menu">
+            <nav class="d-none d-xl-flex align-items-center gap-4 custom-nav ms-auto me-4" id="main-navigation-menu">
                 <a href="index.html" class="nav-link custom-nav-link">Home</a>
                 <a href="where-to-go.html" class="nav-link custom-nav-link">Where to Go</a>
                 <a href="what-to-do.html" class="nav-link custom-nav-link">What to Do</a>
@@ -47,7 +47,29 @@
 
             <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold"
                 id="header-book-btn">Book Now</a>
+            <!-- Hamburger Button (Mobile) -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <!-- Mobile Drawer -->
+    <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="where-to-go.html" class="mobile-nav-link">Where to Go</a>
+            <a href="what-to-do.html" class="mobile-nav-link">What to Do</a>
+            <a href="explore-trips.html" class="mobile-nav-link active">Explore Trips</a>
+            <a href="plan-trip.html" class="mobile-nav-link">Plan Trip</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <div class="mobile-book-btn">
+            <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill fw-bold">Book Now</a>
+        </div>
+    </nav>
     </header>
 
     <!-- Article Hero Banner with Slideshow -->
@@ -411,20 +433,35 @@
                 <div class="row g-4">
                     <!-- Review 1 -->
                     <div class="col-md-4" data-aos="fade-up">
-                        <div class="review-card d-flex flex-column">
-                            <div class="text-warning mb-3" style="font-size: 0.9rem;">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="fst-italic text-secondary flex-grow-1" style="font-size: 0.95rem;">"The transition
-                                from climbing Sigiriya in the morning to sitting in the peaceful gardens of Anuradhapura
-                                was amazing. Our driver was incredibly knowledgeable and attentive."</p>
-                            <div class="d-flex align-items-center gap-3 mt-4">
-                                <div class="user-initial bg-initial-green">A</div>
-                                <div>
-                                    <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">Amelia K.</h6>
-                                    <small class="text-secondary" style="font-size: 0.8rem;">Munich, Germany</small>
+                        <div class="flip-card" style="height: 330px;">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="review-card d-flex flex-column">
+                                        <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="fst-italic text-secondary flex-grow-1" style="font-size: 0.95rem;">"The transition
+                                            from climbing Sigiriya in the morning to sitting in the peaceful gardens of Anuradhapura
+                                            was amazing. Our driver was incredibly knowledgeable and attentive."</p>
+                                        <div class="d-flex align-items-center gap-3 mt-4">
+                                            <div class="user-initial bg-initial-green">A</div>
+                                            <div>
+                                                <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">Amelia K.</h6>
+                                                <small class="text-secondary" style="font-size: 0.8rem;">Munich, Germany</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back" style="background-image: url('Images/WTG/Sigiriya_heritage.png');">
+                                    <div class="flip-card-back-overlay">
+                                        <div class="flip-card-back-content">
+                                            <span class="badge bg-white text-dark mb-2">Sigiriya</span>
+                                            <h5 class="fw-bold text-white mb-1">Amelia's Visit</h5>
+                                            <p class="text-white-50 mb-0" style="font-size: 0.85rem;"><i class="bi bi-geo-alt-fill me-1"></i>Sigiriya Rock Fortress</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -432,20 +469,35 @@
 
                     <!-- Review 2 -->
                     <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="review-card d-flex flex-column">
-                            <div class="text-warning mb-3" style="font-size: 0.9rem;">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="fst-italic text-secondary flex-grow-1" style="font-size: 0.95rem;">"Heritance
-                                Kandalama was a highlight of our trip—it feels like you're staying inside the jungle
-                                itself. Pigeon Island snorkeling in Trinco was the perfect ending."</p>
-                            <div class="d-flex align-items-center gap-3 mt-4">
-                                <div class="user-initial bg-initial-blue">D</div>
-                                <div>
-                                    <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">David L.</h6>
-                                    <small class="text-secondary" style="font-size: 0.8rem;">Boston, USA</small>
+                        <div class="flip-card" style="height: 330px;">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="review-card d-flex flex-column">
+                                        <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="fst-italic text-secondary flex-grow-1" style="font-size: 0.95rem;">"Heritance
+                                            Kandalama was a highlight of our trip—it feels like you're staying inside the jungle
+                                            itself. Pigeon Island snorkeling in Trinco was the perfect ending."</p>
+                                        <div class="d-flex align-items-center gap-3 mt-4">
+                                            <div class="user-initial bg-initial-blue">D</div>
+                                            <div>
+                                                <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">David L.</h6>
+                                                <small class="text-secondary" style="font-size: 0.8rem;">Boston, USA</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back" style="background-image: url('Images/ET/kandalama_hotel.png');">
+                                    <div class="flip-card-back-overlay">
+                                        <div class="flip-card-back-content">
+                                            <span class="badge bg-white text-dark mb-2">Kandalama & Trinco</span>
+                                            <h5 class="fw-bold text-white mb-1">David's Visit</h5>
+                                            <p class="text-white-50 mb-0" style="font-size: 0.85rem;"><i class="bi bi-geo-alt-fill me-1"></i>Heritance Kandalama & Snorkeling</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -453,21 +505,36 @@
 
                     <!-- Review 3 -->
                     <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="review-card d-flex flex-column">
-                            <div class="text-warning mb-3" style="font-size: 0.9rem;">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="fst-italic text-secondary flex-grow-1" style="font-size: 0.95rem;">"Every detail
-                                was handled perfectly, from the bike tours in Polonnaruwa to the ocean safaris. It is a
-                                very well-paced trip that balances active exploration with beach rest."</p>
-                            <div class="d-flex align-items-center gap-3 mt-4">
-                                <div class="user-initial bg-initial-brown">C</div>
-                                <div>
-                                    <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">Charlotte & Pierre
-                                    </h6>
-                                    <small class="text-secondary" style="font-size: 0.8rem;">Paris, France</small>
+                        <div class="flip-card" style="height: 330px;">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="review-card d-flex flex-column">
+                                        <div class="text-warning mb-3" style="font-size: 0.9rem;">
+                                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="fst-italic text-secondary flex-grow-1" style="font-size: 0.95rem;">"Every detail
+                                            was handled perfectly, from the bike tours in Polonnaruwa to the ocean safaris. It is a
+                                            very well-paced trip that balances active exploration with beach rest."</p>
+                                        <div class="d-flex align-items-center gap-3 mt-4">
+                                            <div class="user-initial bg-initial-brown">C</div>
+                                            <div>
+                                                <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">Charlotte & Pierre
+                                                </h6>
+                                                <small class="text-secondary" style="font-size: 0.8rem;">Paris, France</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back" style="background-image: url('Images/ET/jungle_beach_hotel.png');">
+                                    <div class="flip-card-back-overlay">
+                                        <div class="flip-card-back-content">
+                                            <span class="badge bg-white text-dark mb-2">Polonnaruwa & Safari</span>
+                                            <h5 class="fw-bold text-white mb-1">Charlotte & Pierre</h5>
+                                            <p class="text-white-50 mb-0" style="font-size: 0.85rem;"><i class="bi bi-geo-alt-fill me-1"></i>Historic Ruins & Ocean Safari</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -491,7 +558,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer bg-white border-top">
+        <footer class="footer bg-white border-top">
         <div class="container py-5 mt-4">
             <div class="row g-4 justify-content-between mb-2">
                 <div class="col-lg-5 col-md-6">
@@ -510,8 +577,9 @@
                 <div class="col-lg-3 col-md-3 col-6">
                     <h6 class="footer-heading mb-4 fw-bold text-uppercase">Legal</h6>
                     <ul class="list-unstyled footer-links mb-0">
-                        <li class="mb-3"><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li class="mb-3"><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li class="mt-3"><a href="Dashboard/index.html" class="secret-dashboard-link" target="_blank" rel="noopener noreferrer">Admin Dashboard</a></li>
                     </ul>
                 </div>
             </div>
@@ -675,6 +743,7 @@
             }
         });
     </script>
+    <script src="mobile-menu.js"></script>
 </body>
 
 </html>

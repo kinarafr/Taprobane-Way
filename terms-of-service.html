@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Taprobane Way</title>
+    <meta name="description" content="Read the Taprobane Way Terms of Service. Understand travel booking terms, cancellations, liability, and payment conditions for our boutique Sri Lankan tours.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ===== Legal Pages (Privacy/Terms) Scope Styles ===== */
+        .legal-page-header {
+            background-color: var(--bg-header);
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+
+        .legal-page-header h1 {
+            font-size: clamp(2.4rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 1.1rem;
+        }
+
+        .legal-page-header p {
+            font-size: 1rem;
+            color: #666;
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .legal-section {
+            background-color: #fcfcfc;
+            padding: 4rem 0 6rem;
+        }
+
+        .legal-card {
+            background: #fff;
+            border-radius: 1.5rem;
+            padding: 3.5rem;
+            box-shadow: 0 4px 28px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .legal-sidebar {
+            position: sticky;
+            top: 100px;
+            padding-right: 2rem;
+        }
+
+        .legal-sidebar-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: #888;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .legal-nav-link {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #666;
+            transition: var(--transition);
+            border-left: 3px solid transparent;
+            padding-left: 1rem;
+        }
+
+        .legal-nav-link:hover,
+        .legal-nav-link.active {
+            color: var(--primary-color);
+            border-left-color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .legal-content h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 3rem;
+            margin-bottom: 1.2rem;
+            scroll-margin-top: 120px; /* Offset for sticky header scroll */
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-content ul, 
+        .legal-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .legal-content li {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 991.98px) {
+            .legal-sidebar {
+                position: relative;
+                top: 0;
+                padding-right: 0;
+                margin-bottom: 3rem;
+            }
+            .legal-card {
+                padding: 2.2rem 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-mask-layer"></div>
+        <div class="loader-content-wrapper">
+            <div class="loader-lion-container">
+                <div class="lion-silhouette"></div>
+                <div class="lion-fill"></div>
+            </div>
+            <div class="loader-text">Discovering the Pearl of the Indian Ocean</div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html" class="navbar-brand logo fw-bold"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
+
+            <nav class="d-none d-xl-flex align-items-center gap-4 custom-nav ms-auto me-4">
+                <a href="index.html" class="nav-link custom-nav-link">Home</a>
+                <a href="where-to-go.html" class="nav-link custom-nav-link">Where to Go</a>
+                <a href="what-to-do.html" class="nav-link custom-nav-link">What to Do</a>
+                <a href="explore-trips.html" class="nav-link custom-nav-link">Explore Trips</a>
+                <a href="plan-trip.html" class="nav-link custom-nav-link">Plan Trip</a>
+                <a href="contact.html" class="nav-link custom-nav-link">Contact</a>
+            </nav>
+
+            <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold">Book Now</a>
+            <!-- Hamburger Button (Mobile) -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+        <!-- Mobile Drawer -->
+        <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="where-to-go.html" class="mobile-nav-link">Where to Go</a>
+            <a href="what-to-do.html" class="mobile-nav-link">What to Do</a>
+            <a href="explore-trips.html" class="mobile-nav-link">Explore Trips</a>
+            <a href="plan-trip.html" class="mobile-nav-link">Plan Trip</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <div class="mobile-book-btn">
+                <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill fw-bold">Book Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <div class="legal-page-header" data-aos="fade-up" data-aos-duration="800">
+        <h1>Terms of Service</h1>
+        <p>Last updated: June 30, 2026</p>
+    </div>
+
+    <!-- ===== CONTENT SECTION ===== -->
+    <section class="legal-section">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar Navigation -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="legal-sidebar" data-aos="fade-right" data-aos-delay="50">
+                        <div class="legal-sidebar-title">Contents</div>
+                        <nav class="legal-nav">
+                            <a href="#acceptance" class="legal-nav-link active">1. Acceptance of Terms</a>
+                            <a href="#intellectual-property" class="legal-nav-link">2. Intellectual Property</a>
+                            <a href="#bookings-payments" class="legal-nav-link">3. Bookings & Payments</a>
+                            <a href="#cancellations-refunds" class="legal-nav-link">4. Cancellations & Refunds</a>
+                            <a href="#liability" class="legal-nav-link">5. Limitation of Liability</a>
+                            <a href="#governing-law" class="legal-nav-link">6. Governing Law</a>
+                            <a href="#contact" class="legal-nav-link">7. Contact Information</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Detailed Content -->
+                <div class="col-lg-9" data-aos="fade-up" data-aos-delay="100">
+                    <div class="legal-card">
+                        <div class="legal-content">
+                            <h2 id="acceptance">1. Acceptance of Terms</h2>
+                            <p>By accessing, browsing, or using the Taprobane Way website and booking any customized travel services with us, you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, you should immediately cease all use of our services.</p>
+                            <p>We reserves the right to amend, change, or update these Terms at any time without prior notice. The date of the last update will always be prominently displayed at the top of this page.</p>
+
+                            <h2 id="intellectual-property">2. Intellectual Property</h2>
+                            <p>All content, branding, design assets, website layout, text, graphics, and custom code components present on this platform are the intellectual property of Taprobane Way. Any reproduction, distribution, or commercial reuse of our assets without express written authorization is strictly prohibited.</p>
+
+                            <h2 id="bookings-payments">3. Bookings & Payments</h2>
+                            <p>When booking custom trips via our "Plan Trip" planner or direct consultancy, the following terms apply:</p>
+                            <ul>
+                                <li><strong>Inquiry and Quotation:</strong> All quotes generated through the website are estimates based on custom criteria (number of travelers, budget level, and selected activities) and remain subject to availability and currency variations until booking confirmation.</li>
+                                <li><strong>Deposit Requirements:</strong> A deposit (specified in your tailored invoice) is required to secure accommodation reservations, private vehicle allocations, and boutique guide bookings.</li>
+                                <li><strong>Final Payment:</strong> The remaining balance of your customized tour itinerary must be cleared no later than 30 days prior to the arrival date, unless explicitly agreed otherwise in writing.</li>
+                            </ul>
+
+                            <h2 id="cancellations-refunds">4. Cancellations & Refunds</h2>
+                            <p>We understand that travel plans can change. Cancellations must be submitted in writing. The refund scale depends heavily on the policy of local boutique partners and stays:</p>
+                            <ul>
+                                <li>Cancellations made 60 days or more prior to arrival: Full refund minus a small administrative booking fee.</li>
+                                <li>Cancellations made 30 to 59 days prior to arrival: 50% deposit forfeiture.</li>
+                                <li>Cancellations made less than 30 days prior to arrival: No refund option available. We highly recommend all travelers secure comprehensive travel insurance covering trip interruption and health emergencies.</li>
+                            </ul>
+
+                            <h2 id="liability">5. Limitation of Liability</h2>
+                            <p>Taprobane Way functions as an organizer of custom experiential travel. While we partner with the highest quality transport, activity, and accommodation providers in Sri Lanka, we are not liable for acts, errors, omissions, warranties, breaches, or negligence of third-party suppliers, nor for personal injuries, property damage, or delays resulting from circumstances beyond our direct control (force majeure, natural disasters, political strikes, or flight delays).</p>
+
+                            <h2 id="governing-law">6. Governing Law</h2>
+                            <p>These Terms of Service and any contractual relationships arising from booking itineraries through our platform shall be governed by, construed, and enforced in accordance with the laws of Sri Lanka, without regard to conflict of law principles.</p>
+
+                            <h2 id="contact">7. Contact Information</h2>
+                            <p>For support, legal notices, or feedback regarding our services, please connect with us at:</p>
+                            <p>
+                                <strong>Email:</strong> legal@taprobaneway.com<br>
+                                <strong>Address:</strong> 12 Galle Face Terrace, Colombo 03, Sri Lanka<br>
+                                <strong>Phone:</strong> +94 77 123 4567
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer bg-white border-top">
+        <div class="container py-5 mt-4">
+            <div class="row g-4 justify-content-between mb-2">
+                <div class="col-lg-5 col-md-6">
+                    <a href="index.html" class="footer-brand d-block mb-3 fw-bold" id="footer-logo-link"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
+                    <p class="text-secondary pe-lg-5">Crafted for serene adventure. Experience the raw, lush beauty of
+                        Sri Lanka with a sophisticated, contemporary journey.</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <h6 class="footer-heading mb-4 fw-bold text-uppercase">Explore</h6>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-3"><a href="where-to-go.html">Destinations</a></li>
+                        <li class="mb-3"><a href="what-to-do.html">Activities</a></li>
+                        <li><a href="plan-trip.html">Trip Planner</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <h6 class="footer-heading mb-4 fw-bold text-uppercase">Legal</h6>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-3"><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li class="mt-3"><a href="Dashboard/index.html" class="secret-dashboard-link" target="_blank" rel="noopener noreferrer">Admin Dashboard</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-4">
+            <div class="container text-center">
+                <p class="text-secondary mb-0 fw-medium" style="font-size: 0.85rem;">&copy; 2026 Taprobane Way. All
+                    rights reserved. Crafted for serene adventure.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="aos/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Page Loader script
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                const navType = performance.getEntriesByType("navigation")[0]?.type;
+                const isFirstVisit = !sessionStorage.getItem('siteVisited');
+                
+                if (navType === 'reload' || isFirstVisit) {
+                    sessionStorage.setItem('siteVisited', 'true');
+                    setTimeout(() => {
+                        loader.classList.add('loader-zoom-out');
+                        setTimeout(() => {
+                            loader.style.display = 'none';
+                        }, 1500); 
+                    }, 2200); 
+                } else {
+                    loader.style.display = 'none';
+                }
+            }
+        });
+
+        // ScrollSpy implementation for Sidebar navigation
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.legal-content h2');
+            const navLinks = document.querySelectorAll('.legal-nav-link');
+
+            function makeActive() {
+                let scrollPos = window.scrollY || document.documentElement.scrollTop;
+                
+                // Add offset for the navbar height
+                scrollPos += 150;
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+
+                    if (scrollPos >= sectionTop) {
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        const activeLink = document.querySelector(`.legal-nav-link[href="#${section.id}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', makeActive);
+            makeActive();
+        });
+    </script>
+    <script src="mobile-menu.js"></script>
+</body>
+
+</html>

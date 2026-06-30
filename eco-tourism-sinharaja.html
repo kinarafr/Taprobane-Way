@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-tourism in Sinharaja - Rainforest Adventure | Taprobane Way</title>
+    <meta name="description"
+        content="Explore the Sinharaja Rainforest, a UNESCO World Heritage Site and Sri Lanka's last viable area of primary tropical rainforest. Discover eco-tourism trails, endemic wildlife, and plan your green adventure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-mask-layer"></div>
+        <div class="loader-content-wrapper">
+            <div class="loader-lion-container">
+                <div class="lion-silhouette"></div>
+                <div class="lion-fill"></div>
+            </div>
+            <div class="loader-text">Discovering the Pearl of the Indian Ocean</div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html" class="navbar-brand logo fw-bold" id="header-logo-link"><img
+                    src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
+
+            <nav class="d-none d-xl-flex align-items-center gap-4 custom-nav ms-auto me-4" id="main-navigation-menu">
+                <a href="index.html" class="nav-link custom-nav-link">Home</a>
+                <a href="where-to-go.html" class="nav-link custom-nav-link">Where to Go</a>
+                <a href="what-to-do.html" class="nav-link custom-nav-link active">What to Do</a>
+                <a href="explore-trips.html" class="nav-link custom-nav-link">Explore Trips</a>
+                <a href="plan-trip.html" class="nav-link custom-nav-link">Plan Trip</a>
+                <a href="contact.html" class="nav-link custom-nav-link">Contact</a>
+            </nav>
+
+            <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold" id="header-book-btn">Book
+                Now</a>
+            <!-- Hamburger Button (Mobile) -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+        <!-- Mobile Drawer -->
+        <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="where-to-go.html" class="mobile-nav-link">Where to Go</a>
+            <a href="what-to-do.html" class="mobile-nav-link active">What to Do</a>
+            <a href="explore-trips.html" class="mobile-nav-link">Explore Trips</a>
+            <a href="plan-trip.html" class="mobile-nav-link">Plan Trip</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <div class="mobile-book-btn">
+                <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill fw-bold">Book Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Article Hero Banner with Slideshow -->
+    <section class="article-hero" aria-label="Sinharaja Eco-tourism Hero Slideshow" id="hero-slideshow-container">
+        <!-- Hero Slides background (gray placeholders) -->
+        <div class="article-hero-slides">
+            <div class="article-hero-slide active" style="background-color: #6b7280;" data-index="0"></div>
+            <div class="article-hero-slide" style="background-color: #4b5563;" data-index="1"></div>
+            <div class="article-hero-slide" style="background-color: #374151;" data-index="2"></div>
+        </div>
+
+        <div class="article-hero-overlay"></div>
+
+        <div class="container">
+            <div class="article-hero-content" data-aos="fade-up">
+                <div class="article-breadcrumbs" id="article-nav-breadcrumbs">
+                    <a href="index.html">Home</a> &gt; <a href="what-to-do.html">What to Do</a> &gt; <span
+                        class="text-white-50">Eco-tourism in Sinharaja</span>
+                </div>
+                <span
+                    class="badge badge-hill text-dark fw-bold mb-2 rounded-pill px-3 py-2 article-meta-badge">Rainforest
+                    Expedition</span>
+
+                <h1 class="article-title text-white mb-3" id="main-article-title">Eco-tourism in Sinharaja</h1>
+
+                <div class="d-flex align-items-center justify-content-between text-white-50 gap-3 flex-wrap"
+                    style="font-size: 0.95rem; width: 100%;">
+                    <div class="d-flex align-items-center gap-3 flex-wrap">
+                        <span>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-fill text-warning me-1"></i>
+                            <i class="bi bi-star-half text-warning me-1"></i>
+                            <strong class="text-white ms-1">4.8</strong> (95+ reviews)
+                        </span>
+                        <span>|</span>
+                        <span><i class="bi bi-geo-alt-fill me-1"></i>Sabaragamuwa Province, Sri Lanka</span>
+                    </div>
+                    <!-- Slide Indicators -->
+                    <div class="hero-indicators position-static m-0" id="hero-slideshow-indicators">
+                        <button class="hero-indicator active" data-slide="0" aria-label="Go to Slide 1"></button>
+                        <button class="hero-indicator" data-slide="1" aria-label="Go to Slide 2"></button>
+                        <button class="hero-indicator" data-slide="2" aria-label="Go to Slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="py-5" id="article-body-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Article Editorial -->
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="article-body-text pe-lg-4">
+                        <p class="lead">Nestled deep within the southwestern lowlands of Sri Lanka, the Sinharaja
+                            Forest Reserve stands as the island's last viable area of primary tropical rainforest.
+                            Declared a UNESCO World Heritage Site in 1988 and later a Biosphere Reserve, this
+                            ancient woodland is a living treasure trove of endemic species, rare flora, and an
+                            unbroken canopy that has sheltered life for millennia.</p>
+
+                        <p>Eco-tourism in Sinharaja is not just about walking through a forest — it is about
+                            stepping into one of the most biologically dense ecosystems on Earth. Over 60% of the
+                            trees here are endemic to Sri Lanka, and you'll find yourself surrounded by towering
+                            dipterocarp giants, tangled lianas, and a thick undergrowth that teems with insect
+                            symphonies from dawn to dusk. The forest receives between 3,000 and 6,000 millimetres
+                            of rainfall annually, creating a perpetually lush, mist-laden atmosphere that feels
+                            almost primordial.</p>
+
+                        <p>Whether you are a bird-watching enthusiast drawn by the legendary mixed-species feeding
+                            flocks, a herpetologist tracking the elusive hump-nosed lizard, or simply a mindful
+                            traveler seeking the quietude of an undisturbed wilderness, Sinharaja offers an
+                            eco-tourism experience that is as educational as it is awe-inspiring. Community-based
+                            guides from surrounding villages ensure your visit supports local livelihoods while
+                            minimizing environmental impact.</p>
+
+                        <!-- Local Highlights Section -->
+                        <h2 class="fw-bold mt-5 mb-4 text-dark" id="local-highlights-heading">Signature Eco
+                            Experiences</h2>
+
+                        <div class="row g-4">
+                            <!-- Highlight 1: Endemic Birdwatching -->
+                            <div class="col-md-6">
+                                <div class="highlight-card p-4 h-100">
+                                    <div class="highlight-icon-wrapper mb-3">
+                                        <i class="bi bi-feather"></i>
+                                    </div>
+                                    <h3 class="fw-bold h5 mb-2 text-dark">Endemic Birdwatching</h3>
+                                    <p class="text-secondary mb-0" style="font-size: 0.92rem;">Home to 26 of Sri
+                                        Lanka's 33 endemic bird species, Sinharaja is the island's premier
+                                        birding destination. Watch the Sri Lanka Blue Magpie, Red-faced Malkoha,
+                                        and Ashy-headed Laughingthrush in their mixed-species feeding flocks.</p>
+                                </div>
+                            </div>
+
+                            <!-- Highlight 2: Canopy Trails -->
+                            <div class="col-md-6">
+                                <div class="highlight-card p-4 h-100">
+                                    <div class="highlight-icon-wrapper mb-3">
+                                        <i class="bi bi-tree-fill"></i>
+                                    </div>
+                                    <h3 class="fw-bold h5 mb-2 text-dark">Canopy Nature Trails</h3>
+                                    <p class="text-secondary mb-0" style="font-size: 0.92rem;">Trek along
+                                        well-maintained trails that wind through the dense canopy, past hidden
+                                        waterfalls and natural rock pools. Routes range from gentle two-hour
+                                        walks to challenging full-day expeditions deep into the reserve's
+                                        heart.</p>
+                                </div>
+                            </div>
+
+                            <!-- Highlight 3: Medicinal Plants -->
+                            <div class="col-md-6">
+                                <div class="highlight-card p-4 h-100">
+                                    <div class="highlight-icon-wrapper mb-3">
+                                        <i class="bi bi-flower1"></i>
+                                    </div>
+                                    <h3 class="fw-bold h5 mb-2 text-dark">Medicinal Plant Discovery</h3>
+                                    <p class="text-secondary mb-0" style="font-size: 0.92rem;">Learn about the
+                                        traditional medicinal plants used in indigenous Ayurvedic remedies for
+                                        centuries. Local guides share the botanical secrets of the forest
+                                        floor, from wild cinnamon to rare orchids with healing properties.</p>
+                                </div>
+                            </div>
+
+                            <!-- Highlight 4: Community-Based Tourism -->
+                            <div class="col-md-6">
+                                <div class="highlight-card p-4 h-100">
+                                    <div class="highlight-icon-wrapper mb-3">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                    <h3 class="fw-bold h5 mb-2 text-dark">Community-Led Guides</h3>
+                                    <p class="text-secondary mb-0" style="font-size: 0.92rem;">Support sustainable
+                                        tourism through community-based guide services. Trained naturalists from
+                                        surrounding villages lead immersive treks, sharing generations of
+                                        knowledge about the forest's ecology and cultural significance.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Right Sidebar Guide Card -->
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="guide-card sticky-top" style="top: 2rem;" id="traveler-guide-sidebar">
+                        <h4 class="fw-bold mb-4 text-dark"><i
+                                class="bi bi-info-circle-fill me-2 text-success"></i>Traveler's Guide</h4>
+
+                        <div class="guide-item">
+                            <h5 class="fw-bold text-secondary mb-1"
+                                style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Best Time
+                                to Visit</h5>
+                            <p class="mb-0 text-dark" style="font-size: 0.95rem;">January to April and August to
+                                September offer the driest conditions. Early morning visits maximize wildlife
+                                sightings.</p>
+                        </div>
+
+                        <div class="guide-item">
+                            <h5 class="fw-bold text-secondary mb-1"
+                                style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Getting
+                                There</h5>
+                            <p class="mb-0 text-dark" style="font-size: 0.95rem;">Approximately 3 hours from Colombo
+                                via Ratnapura, or 2 hours from Galle. Entry is via Kudawa, Pitadeniya, or
+                                Morningside gates.</p>
+                        </div>
+
+                        <div class="guide-item">
+                            <h5 class="fw-bold text-secondary mb-1"
+                                style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Suggested
+                                Duration</h5>
+                            <p class="mb-0 text-dark" style="font-size: 0.95rem;">1 to 2 full days to explore
+                                different trails, visit natural pools, and experience the forest at both dawn and
+                                dusk.</p>
+                        </div>
+
+                        <div class="guide-item">
+                            <h5 class="fw-bold text-secondary mb-1"
+                                style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Eco Tip
+                            </h5>
+                            <p class="mb-0 text-dark" style="font-size: 0.95rem;">Bring leech-proof socks and
+                                lightweight rain gear. Carry a reusable water bottle — plastic is discouraged
+                                inside the reserve to protect its pristine ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asymmetric Image Gallery Section (gray placeholders) -->
+    <section class="gallery-container bg-white py-5" id="photo-gallery-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="badge badge-hill text-dark fw-bold mb-2 rounded-pill px-3 py-2">Into the
+                    Canopy</span>
+                <h2 class="fw-bold text-dark">Capturing Sinharaja</h2>
+                <p class="text-secondary mx-auto" style="max-width: 500px;">Glimpses of the emerald depths,
+                    mist-laden trails, and vibrant wildlife of the last great rainforest.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Main Rainforest (Wide) -->
+                <div class="gallery-item gallery-item-1" data-aos="zoom-in" id="gallery-img-1">
+                    <div
+                        style="width: 100%; height: 100%; background-color: #9ca3af; display: flex; align-items: center; justify-content: center; border-radius: inherit; color: #fff; font-size: 0.9rem; font-weight: 600;">
+                        Sinharaja Canopy View</div>
+                </div>
+                <!-- Birdlife (Tall) -->
+                <div class="gallery-item gallery-item-2" data-aos="zoom-in" data-aos-delay="100" id="gallery-img-2">
+                    <div
+                        style="width: 100%; height: 100%; background-color: #6b7280; display: flex; align-items: center; justify-content: center; border-radius: inherit; color: #fff; font-size: 0.9rem; font-weight: 600;">
+                        Endemic Birdlife</div>
+                </div>
+                <!-- Waterfall (Square) -->
+                <div class="gallery-item gallery-item-3" data-aos="zoom-in" id="gallery-img-3">
+                    <div
+                        style="width: 100%; height: 100%; background-color: #4b5563; display: flex; align-items: center; justify-content: center; border-radius: inherit; color: #fff; font-size: 0.9rem; font-weight: 600;">
+                        Hidden Waterfall</div>
+                </div>
+                <!-- Trail Details (Wide) -->
+                <div class="gallery-item gallery-item-4" data-aos="zoom-in" data-aos-delay="100" id="gallery-img-4">
+                    <div
+                        style="width: 100%; height: 100%; background-color: #374151; display: flex; align-items: center; justify-content: center; border-radius: inherit; color: #fff; font-size: 0.9rem; font-weight: 600;">
+                        Forest Trail</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Section -->
+    <section class="container mb-5" id="cta-book-section" data-aos="fade-up">
+        <div class="article-cta">
+            <div class="article-cta-content">
+                <h2 class="display-5 fw-bold mb-3 text-white">Ready to Explore Sinharaja?</h2>
+                <p class="text-white opacity-75 mb-4" style="font-size: 1.1rem;">Let our travel curators craft a
+                    custom eco-adventure into the heart of Sri Lanka's most biodiverse wilderness.</p>
+                <a href="explore-trips.html" class="btn btn-cta-book rounded-pill fw-bold" id="cta-book-now-button">Book
+                    Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <footer class="footer bg-white border-top">
+        <div class="container py-5 mt-4">
+            <div class="row g-4 justify-content-between mb-2">
+                <div class="col-lg-5 col-md-6">
+                    <a href="index.html" class="footer-brand d-block mb-3 fw-bold" id="footer-logo-link"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
+                    <p class="text-secondary pe-lg-5">Crafted for serene adventure. Experience the raw, lush beauty of
+                        Sri Lanka with a sophisticated, contemporary journey.</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <h6 class="footer-heading mb-4 fw-bold text-uppercase">Explore</h6>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-3"><a href="where-to-go.html">Destinations</a></li>
+                        <li class="mb-3"><a href="what-to-do.html">Activities</a></li>
+                        <li><a href="plan-trip.html">Trip Planner</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6">
+                    <h6 class="footer-heading mb-4 fw-bold text-uppercase">Legal</h6>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-3"><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li class="mt-3"><a href="Dashboard/index.html" class="secret-dashboard-link" target="_blank" rel="noopener noreferrer">Admin Dashboard</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-4">
+            <div class="container text-center">
+                <p class="text-secondary mb-0 fw-medium" style="font-size: 0.85rem;">&copy; 2026 Taprobane Way. All
+                    rights reserved. Crafted for serene adventure.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="gallery-lightbox" id="gallery-lightbox-modal" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close Lightbox">&times;</button>
+        <button class="lightbox-nav-btn lightbox-prev" id="lightbox-prev-btn" aria-label="Previous Image"><i
+                class="bi bi-chevron-left"></i></button>
+        <button class="lightbox-nav-btn lightbox-next" id="lightbox-next-btn" aria-label="Next Image"><i
+                class="bi bi-chevron-right"></i></button>
+
+        <div class="lightbox-content-wrapper">
+            <img src="" alt="" class="lightbox-img" id="lightbox-active-img">
+            <div class="lightbox-caption" id="lightbox-active-caption"></div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and Scripts -->
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="aos/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Slideshow Logic
+            const slides = document.querySelectorAll('.article-hero-slide');
+            const indicators = document.querySelectorAll('.hero-indicator');
+            let currentSlide = 0;
+            let slideInterval = setInterval(nextSlide, 5000);
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(ind => ind.classList.remove('active'));
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                let next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function () {
+                    clearInterval(slideInterval);
+                    const slideIndex = parseInt(this.getAttribute('data-slide'));
+                    showSlide(slideIndex);
+                    slideInterval = setInterval(nextSlide, 5000);
+                });
+            });
+        });
+    </script>
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                const navType = performance.getEntriesByType("navigation")[0]?.type;
+                const isFirstVisit = !sessionStorage.getItem('siteVisited');
+
+                if (navType === 'reload' || isFirstVisit) {
+                    sessionStorage.setItem('siteVisited', 'true');
+                    setTimeout(() => {
+                        loader.classList.add('loader-zoom-out');
+                        setTimeout(() => {
+                            loader.style.display = 'none';
+                        }, 1500);
+                    }, 2200);
+                } else {
+                    loader.style.display = 'none';
+                }
+            }
+        });
+    </script>
+    <script src="mobile-menu.js"></script>
+</body>
+
+</html>

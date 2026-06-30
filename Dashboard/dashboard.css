@@ -1,0 +1,218 @@
+/* Dashboard specific styles */
+body {
+    cursor: auto !important;
+}
+
+a, button, .tab-btn, .clear-btn, [role="button"] {
+    cursor: pointer !important;
+}
+
+.dashboard-container {
+    padding: 3rem 0;
+    min-height: 80vh;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.dashboard-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+    background: rgba(16, 71, 53, 0.05);
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.record-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.8rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.record-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(16, 71, 53, 0.08);
+}
+
+.record-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.record-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.record-date {
+    font-size: 0.8rem;
+    color: #888;
+    background: #f5f5f5;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+}
+
+.record-body {
+    flex-grow: 1;
+}
+
+.record-field {
+    margin-bottom: 0.8rem;
+}
+
+.field-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.2rem;
+}
+
+.field-value {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.field-value.message {
+    background: #f9f9f9;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    border: 1px solid #eee;
+}
+
+.interests-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+.interest-tag {
+    font-size: 0.75rem;
+    background: rgba(16, 71, 53, 0.08);
+    color: var(--primary-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #fff;
+    border-radius: 1rem;
+    border: 1px dashed #ccc;
+}
+
+.empty-state svg {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    color: #888;
+}
+
+.clear-btn {
+    background: #fff;
+    border: 1px solid #ff4d4f;
+    color: #ff4d4f;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.clear-btn:hover {
+    background: #ff4d4f;
+    color: #fff;
+}
+
+.record-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid #f5f5f5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-email-back {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    transition: all 0.25s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-email-back:hover {
+    background-color: transparent;
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(16, 71, 53, 0.15);
+}
+
+.btn-email-back active {
+    transform: translateY(0);
+}

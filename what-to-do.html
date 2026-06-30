@@ -33,7 +33,7 @@
         <div class="container d-flex align-items-center justify-content-between">
             <a href="index.html" class="navbar-brand logo fw-bold"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
 
-            <nav class="d-none d-md-flex align-items-center gap-4 custom-nav ms-auto me-4">
+            <nav class="d-none d-xl-flex align-items-center gap-4 custom-nav ms-auto me-4">
                 <a href="index.html" class="nav-link custom-nav-link">Home</a>
                 <a href="where-to-go.html" class="nav-link custom-nav-link">Where to Go</a>
                 <a href="what-to-do.html" class="nav-link custom-nav-link active">What to Do</a>
@@ -43,23 +43,48 @@
             </nav>
 
             <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold">Book Now</a>
+            <!-- Hamburger Button (Mobile) -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <!-- Mobile Drawer -->
+    <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="where-to-go.html" class="mobile-nav-link">Where to Go</a>
+            <a href="what-to-do.html" class="mobile-nav-link active">What to Do</a>
+            <a href="explore-trips.html" class="mobile-nav-link">Explore Trips</a>
+            <a href="plan-trip.html" class="mobile-nav-link">Plan Trip</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <div class="mobile-book-btn">
+            <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill fw-bold">Book Now</a>
+        </div>
+    </nav>
     </header>
 
-    <section class="py-4 mt-2 mb-5">
-        <div class="container">
-            <!-- Hero Card -->
-            <div class="wtd-hero-card mb-5" data-aos="fade-up">
-                <video class="w-100 h-100 object-fit-cover" autoplay loop muted playsinline>
-                    <source src="videos/Sri Lanka - Heart of the Indian Ocean - Trim.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="wtd-hero-overlay">
-                    <h1 class="text-white fw-bold mb-3" style="font-size: 3.5rem; line-height: 1.1; letter-spacing: -1px;">Curated<br>Experiences</h1>
-                    <p class="text-white opacity-75 mb-0" style="max-width: 550px; font-size: 1.05rem;">Immerse yourself in the rhythm of the island. From ancient healing traditions to thrilling coastal adventures, discover activities crafted for the mindful traveler.</p>
-                </div>
+    <!-- Hero Section (Full Width) -->
+    <section class="wtd-hero-card mb-5" data-aos="fade-up">
+        <video class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay loop muted playsinline>
+            <source src="videos/Sri Lanka - Heart of the Indian Ocean - Trim.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="wtd-hero-overlay">
+            <div class="container h-100 d-flex flex-column justify-content-end pb-5">
+                <h1 class="text-white fw-bold mb-3" style="font-size: 3.5rem; line-height: 1.1; letter-spacing: -1px;">Curated<br>Experiences</h1>
+                <p class="text-white opacity-75 mb-0" style="max-width: 550px; font-size: 1.05rem;">Immerse yourself in the rhythm of the island. From ancient healing traditions to thrilling coastal adventures, discover activities crafted for the mindful traveler.</p>
             </div>
+        </div>
+    </section>
 
+    <!-- Main Content Section -->
+    <section class="py-4 mb-5">
+        <div class="container">
             <!-- Signature Journeys -->
             <div class="mt-5 mb-4" data-aos="fade-right">
                 <h2 class="fw-bold mb-1" style="color: #0c3628;">Signature Journeys</h2>
@@ -69,7 +94,7 @@
             <div class="row g-4">
                 <!-- Ayurvedic -->
                 <div class="col-lg-7" data-aos="fade-up">
-                    <div class="wtd-card">
+                    <a href="ayurvedic-wellness.html" class="wtd-card d-block text-decoration-none">
                         <img src="Images/WTD/Ayurvedic.png" alt="Ayurvedic Wellness Retreat" class="w-100 h-100 object-fit-cover">
                         <div class="wtd-card-overlay">
                             <div class="d-flex gap-2">
@@ -81,7 +106,7 @@
                                 <p class="text-white opacity-75 mb-0" style="font-size: 0.95rem;">Restore balance with ancient healing practices tailored to your dosha, set amidst tranquil jungle surroundings.</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Coastal Surfing -->
@@ -203,33 +228,36 @@
         </div>
     </section>
 
-    <footer class="footer bg-white border-top">
+        <footer class="footer bg-white border-top">
         <div class="container py-5 mt-4">
             <div class="row g-4 justify-content-between mb-2">
                 <div class="col-lg-5 col-md-6">
-                    <a href="#" class="footer-brand d-block mb-3 fw-bold"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
-                    <p class="text-secondary pe-lg-5">Crafted for serene adventure. Experience the raw, lush beauty of Sri Lanka with a sophisticated, contemporary journey.</p>
+                    <a href="index.html" class="footer-brand d-block mb-3 fw-bold" id="footer-logo-link"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
+                    <p class="text-secondary pe-lg-5">Crafted for serene adventure. Experience the raw, lush beauty of
+                        Sri Lanka with a sophisticated, contemporary journey.</p>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
                     <h6 class="footer-heading mb-4 fw-bold text-uppercase">Explore</h6>
                     <ul class="list-unstyled footer-links mb-0">
-                        <li class="mb-3"><a href="#">Destinations</a></li>
-                        <li class="mb-3"><a href="#">Activities</a></li>
-                        <li><a href="#">Trip Planner</a></li>
+                        <li class="mb-3"><a href="where-to-go.html">Destinations</a></li>
+                        <li class="mb-3"><a href="what-to-do.html">Activities</a></li>
+                        <li><a href="plan-trip.html">Trip Planner</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
                     <h6 class="footer-heading mb-4 fw-bold text-uppercase">Legal</h6>
                     <ul class="list-unstyled footer-links mb-0">
-                        <li class="mb-3"><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li class="mb-3"><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li class="mt-3"><a href="Dashboard/index.html" class="secret-dashboard-link" target="_blank" rel="noopener noreferrer">Admin Dashboard</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-bottom py-4">
-            <div class="container text-center text-md-center">
-                <p class="text-secondary mb-0 fw-medium" style="font-size: 0.85rem;">&copy; 2026 Taprobane Way. All rights reserved. Crafted for serene adventure.</p>
+            <div class="container text-center">
+                <p class="text-secondary mb-0 fw-medium" style="font-size: 0.85rem;">&copy; 2026 Taprobane Way. All
+                    rights reserved. Crafted for serene adventure.</p>
             </div>
         </div>
     </footer>
@@ -264,6 +292,7 @@
             }
         });
     </script>
+    <script src="mobile-menu.js"></script>
 </body>
 
 </html>
