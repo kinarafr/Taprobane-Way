@@ -15,12 +15,22 @@
 </head>
 
 <body>
-
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-mask-layer"></div>
+        <div class="loader-content-wrapper">
+            <div class="loader-lion-container">
+                <div class="lion-silhouette"></div>
+                <div class="lion-fill"></div>
+            </div>
+            <div class="loader-text">Discovering the Pearl of the Indian Ocean</div>
+        </div>
+    </div>
     <header class="header py-3">
         <div class="container d-flex align-items-center justify-content-between">
-            <a href="#" class="navbar-brand logo fw-bold">Taprobane Way</a>
+            <a href="#" class="navbar-brand logo fw-bold"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
 
-            <nav class="d-none d-md-flex align-items-center gap-4 custom-nav">
+            <nav class="d-none d-md-flex align-items-center gap-4 custom-nav ms-auto me-4">
                 <a href="index.html" class="nav-link custom-nav-link active">Home</a>
                 <a href="where-to-go.html" class="nav-link custom-nav-link">Where to Go</a>
                 <a href="what-to-do.html" class="nav-link custom-nav-link">What to Do</a>
@@ -29,7 +39,7 @@
                 <a href="contact.html" class="nav-link custom-nav-link">Contact</a>
             </nav>
 
-            <a href="explore-trips.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold">Book Now</a>
+            <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold">Book Now</a>
         </div>
     </header>
 
@@ -46,8 +56,9 @@
             <p class="hero-subtitle mb-5" data-aos="fade-up" data-aos-delay="100">Experience the raw beauty and serene
                 adventure of Sri Lanka.</p>
 
-            <form class="search-bar d-flex align-items-center p-2 mx-auto rounded-4 shadow-lg" data-aos="zoom-in"
-                data-aos-delay="200">
+            <form id="search-form"
+                class="search-bar d-flex align-items-center p-2 mx-auto rounded-4 shadow-lg position-relative"
+                data-aos="zoom-in" data-aos-delay="200">
                 <div class="search-input-group bg-white d-flex align-items-center flex-grow-1 rounded-3 px-3 me-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -55,12 +66,13 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" placeholder="Where to?"
-                        class="form-control border-0 shadow-none bg-transparent px-0 py-3"
-                        aria-label="Search destination">
+                    <input type="text" id="search-input" placeholder="Where to?"
+                        class="form-control border-0 shadow-none bg-transparent px-0 py-3 search-input"
+                        aria-label="Search destination" autocomplete="off">
                 </div>
                 <button type="submit"
                     class="btn btn-custom-primary rounded-pill px-5 py-3 fw-bold flex-shrink-0">Explore</button>
+                <div id="search-suggestions" class="search-suggestions-dropdown"></div>
             </form>
         </div>
     </section>
@@ -79,7 +91,7 @@
 
             <div class="row g-3">
                 <div class="col-md-8" data-aos="fade-up">
-                    <div class="destination-card">
+                    <a href="ella.html" class="destination-card d-block text-decoration-none">
                         <img src="Images/home/Ella_train.png" alt="Ella">
                         <div class="card-overlay">
                             <div class="card-details">
@@ -101,10 +113,10 @@
                                     plantations, and the iconic Nine Arch Bridge.</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="destination-card">
+                    <a href="galle.html" class="destination-card d-block text-decoration-none">
                         <img src="Images/home/Galle_fort.png" alt="Galle">
                         <div class="card-overlay">
                             <div class="card-details">
@@ -126,10 +138,10 @@
                                     streets, and stunning ocean vistas.</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-                    <div class="destination-card destination-card-large">
+                    <a href="kandy.html" class="destination-card destination-card-large d-block text-decoration-none">
                         <img src="Images/home/Kandy_city.png" alt="Kandy">
                         <div class="card-overlay">
                             <div class="card-details">
@@ -151,7 +163,7 @@
                                     walks, and rich cultural traditions.</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -242,7 +254,7 @@
         <div class="container py-5 mt-4">
             <div class="row g-4 justify-content-between mb-2">
                 <div class="col-lg-5 col-md-6">
-                    <a href="#" class="footer-brand d-block mb-3 fw-bold">Taprobane Way</a>
+                    <a href="#" class="footer-brand d-block mb-3 fw-bold"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
                     <p class="text-secondary pe-lg-5">Crafted for serene adventure. Experience the raw, lush beauty of
                         Sri Lanka with a sophisticated, contemporary journey.</p>
                 </div>
@@ -279,7 +291,214 @@
             once: true,
             offset: 100
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Destination database matching where-to-go.html IDs
+            const destinations = [
+                { name: "Mirissa Bay", category: "Coastal", url: "mirissa-bay.html", id: "mirissa-bay" },
+                { name: "Ella", category: "Hill Country", url: "ella.html", id: "ella" },
+                { name: "Galle Fort", category: "Coastal", url: "galle.html", id: "galle" },
+                { name: "Sigiriya", category: "Cultural Triangle", url: "where-to-go.html#sigiriya", id: "sigiriya" },
+                { name: "Yala National Park", category: "Wildlife", url: "where-to-go.html#yala", id: "yala" },
+                { name: "Unawatuna Beach", category: "Beaches", url: "where-to-go.html#unawatuna", id: "unawatuna" },
+                { name: "Kandy", category: "Hill Country", url: "kandy.html", id: "kandy" },
+                { name: "Anuradhapura", category: "Cultural Triangle", url: "where-to-go.html#anuradhapura", id: "anuradhapura" },
+                { name: "Udawalawe", category: "Wildlife", url: "where-to-go.html#udawalawe", id: "udawalawe" },
+                { name: "Nilaveli Beach", category: "Beaches", url: "where-to-go.html#nilaveli", id: "nilaveli" },
+                { name: "Nuwara Eliya", category: "Hill Country", url: "where-to-go.html#nuwara-eliya", id: "nuwara-eliya" },
+                { name: "Polonnaruwa", category: "Cultural Triangle", url: "where-to-go.html#polonnaruwa", id: "polonnaruwa" },
+                { name: "Minneriya", category: "Wildlife", url: "where-to-go.html#minneriya", id: "minneriya" },
+                { name: "Bentota Beach", category: "Beaches", url: "where-to-go.html#bentota", id: "bentota" },
+                { name: "Haputale", category: "Hill Country", url: "where-to-go.html#haputale", id: "haputale" },
+                { name: "Dambulla Cave", category: "Cultural Triangle", url: "where-to-go.html#dambulla", id: "dambulla" },
+                { name: "Wilpattu", category: "Wildlife", url: "where-to-go.html#wilpattu", id: "wilpattu" }
+            ];
+
+            const searchForm = document.getElementById('search-form');
+            const searchInput = document.getElementById('search-input');
+            const suggestionsContainer = document.getElementById('search-suggestions');
+            let activeSuggestionIndex = -1;
+            let currentFilteredDestinations = [];
+
+            // Helper: Get small badge class based on category
+            function getBadgeClass(category) {
+                switch (category.toLowerCase()) {
+                    case 'coastal':
+                    case 'beaches':
+                        return 'badge-coastal-sm';
+                    case 'hill country':
+                        return 'badge-hill-sm';
+                    case 'cultural triangle':
+                        return 'badge-heritage-sm';
+                    case 'wildlife':
+                        return 'badge-wildlife-sm';
+                    default:
+                        return 'badge-default-sm';
+                }
+            }
+
+            // Function to render suggestions
+            function showSuggestions(query) {
+                suggestionsContainer.innerHTML = '';
+                activeSuggestionIndex = -1;
+
+                if (!query.trim()) {
+                    suggestionsContainer.classList.remove('show');
+                    currentFilteredDestinations = [];
+                    return;
+                }
+
+                const cleanedQuery = query.toLowerCase().trim();
+                currentFilteredDestinations = destinations.filter(d =>
+                    d.name.toLowerCase().includes(cleanedQuery) ||
+                    d.category.toLowerCase().includes(cleanedQuery)
+                );
+
+                if (currentFilteredDestinations.length === 0) {
+                    suggestionsContainer.classList.remove('show');
+                    return;
+                }
+
+                currentFilteredDestinations.forEach((dest, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'suggestion-item';
+                    item.setAttribute('role', 'option');
+                    item.setAttribute('id', `suggestion-${index}`);
+
+                    const leftSide = document.createElement('div');
+                    leftSide.className = 'suggestion-item-left';
+                    leftSide.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill suggestion-icon" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>
+                        <span>${dest.name}</span>
+                    `;
+
+                    const badge = document.createElement('span');
+                    badge.className = `suggestion-badge ${getBadgeClass(dest.category)}`;
+                    badge.textContent = dest.category;
+
+                    item.appendChild(leftSide);
+                    item.appendChild(badge);
+
+                    // Click handler
+                    item.addEventListener('click', function () {
+                        searchInput.value = dest.name;
+                        suggestionsContainer.classList.remove('show');
+                        window.location.href = dest.url;
+                    });
+
+                    suggestionsContainer.appendChild(item);
+                });
+
+                suggestionsContainer.classList.add('show');
+            }
+
+            // Keyboard navigation helper
+            function updateActiveSuggestion() {
+                const items = suggestionsContainer.querySelectorAll('.suggestion-item');
+                items.forEach((item, index) => {
+                    if (index === activeSuggestionIndex) {
+                        item.classList.add('active');
+                        item.scrollIntoView({ block: 'nearest' });
+                        searchInput.setAttribute('aria-activedescendant', item.id);
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            }
+
+            // Event listener: Input typing
+            searchInput.addEventListener('input', function () {
+                showSuggestions(this.value);
+            });
+
+            // Event listener: Input focus
+            searchInput.addEventListener('focus', function () {
+                showSuggestions(this.value);
+            });
+
+            // Event listener: Keydown for keyboard navigation
+            searchInput.addEventListener('keydown', function (e) {
+                if (!suggestionsContainer.classList.contains('show')) return;
+
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    activeSuggestionIndex = (activeSuggestionIndex + 1) % currentFilteredDestinations.length;
+                    updateActiveSuggestion();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    activeSuggestionIndex = (activeSuggestionIndex - 1 + currentFilteredDestinations.length) % currentFilteredDestinations.length;
+                    updateActiveSuggestion();
+                } else if (e.key === 'Escape') {
+                    suggestionsContainer.classList.remove('show');
+                    searchInput.blur();
+                } else if (e.key === 'Enter') {
+                    if (activeSuggestionIndex >= 0 && activeSuggestionIndex < currentFilteredDestinations.length) {
+                        e.preventDefault();
+                        const selectedDest = currentFilteredDestinations[activeSuggestionIndex];
+                        searchInput.value = selectedDest.name;
+                        suggestionsContainer.classList.remove('show');
+                        window.location.href = selectedDest.url;
+                    }
+                }
+            });
+
+            // Event listener: Click outside to close dropdown
+            document.addEventListener('click', function (e) {
+                if (!searchForm.contains(e.target)) {
+                    suggestionsContainer.classList.remove('show');
+                }
+            });
+
+            // Event listener: Form submission
+            searchForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const query = searchInput.value.trim().toLowerCase();
+
+                if (!query) {
+                    window.location.href = "where-to-go.html";
+                    return;
+                }
+
+                // Look for an exact or closest matching destination name
+                const bestMatch = destinations.find(d =>
+                    d.name.toLowerCase() === query
+                ) || destinations.find(d =>
+                    d.name.toLowerCase().includes(query)
+                ) || destinations.find(d =>
+                    d.category.toLowerCase().includes(query)
+                );
+
+                if (bestMatch) {
+                    window.location.href = bestMatch.url;
+                } else {
+                    // Fallback to searching where-to-go page
+                    window.location.href = "where-to-go.html";
+                }
+            });
+        });
+    </script>
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                const navType = performance.getEntriesByType("navigation")[0]?.type;
+                const isFirstVisit = !sessionStorage.getItem('siteVisited');
+                
+                if (navType === 'reload' || isFirstVisit) {
+                    sessionStorage.setItem('siteVisited', 'true');
+                    setTimeout(() => {
+                        loader.classList.add('loader-zoom-out');
+                        setTimeout(() => {
+                            loader.style.display = 'none';
+                        }, 1500); 
+                    }, 2200); 
+                } else {
+                    loader.style.display = 'none';
+                }
+            }
+        });
     </script>
 </body>
-
 </html>

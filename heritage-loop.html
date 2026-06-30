@@ -19,13 +19,24 @@
 </head>
 
 <body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-mask-layer"></div>
+        <div class="loader-content-wrapper">
+            <div class="loader-lion-container">
+                <div class="lion-silhouette"></div>
+                <div class="lion-fill"></div>
+            </div>
+            <div class="loader-text">Discovering the Pearl of the Indian Ocean</div>
+        </div>
+    </div>
 
     <!-- Header Navigation -->
     <header class="header py-3">
         <div class="container d-flex align-items-center justify-content-between">
-            <a href="index.html" class="navbar-brand logo fw-bold" id="header-logo-link">Taprobane Way</a>
+            <a href="index.html" class="navbar-brand logo fw-bold" id="header-logo-link"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
 
-            <nav class="d-none d-md-flex align-items-center gap-4 custom-nav" id="main-navigation-menu">
+            <nav class="d-none d-md-flex align-items-center gap-4 custom-nav ms-auto me-4" id="main-navigation-menu">
                 <a href="index.html" class="nav-link custom-nav-link">Home</a>
                 <a href="where-to-go.html" class="nav-link custom-nav-link">Where to Go</a>
                 <a href="what-to-do.html" class="nav-link custom-nav-link">What to Do</a>
@@ -34,7 +45,7 @@
                 <a href="contact.html" class="nav-link custom-nav-link">Contact</a>
             </nav>
 
-            <a href="explore-trips.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold"
+            <a href="plan-trip.html" class="btn btn-custom-primary rounded-pill px-4 fw-bold"
                 id="header-book-btn">Book Now</a>
         </div>
     </header>
@@ -484,8 +495,7 @@
         <div class="container py-5 mt-4">
             <div class="row g-4 justify-content-between mb-2">
                 <div class="col-lg-5 col-md-6">
-                    <a href="index.html" class="footer-brand d-block mb-3 fw-bold" id="footer-logo-link">Taprobane
-                        Way</a>
+                    <a href="index.html" class="footer-brand d-block mb-3 fw-bold" id="footer-logo-link"><img src="Images/Logo/TW Logo.svg" alt="Taprobane Way" class="logo-img"></a>
                     <p class="text-secondary pe-lg-5">Crafted for serene adventure. Experience the raw, lush beauty of
                         Sri Lanka with a sophisticated, contemporary journey.</p>
                 </div>
@@ -642,6 +652,27 @@
                     nextImage();
                 }
             });
+        });
+    </script>
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                const navType = performance.getEntriesByType("navigation")[0]?.type;
+                const isFirstVisit = !sessionStorage.getItem('siteVisited');
+                
+                if (navType === 'reload' || isFirstVisit) {
+                    sessionStorage.setItem('siteVisited', 'true');
+                    setTimeout(() => {
+                        loader.classList.add('loader-zoom-out');
+                        setTimeout(() => {
+                            loader.style.display = 'none';
+                        }, 1500); 
+                    }, 2200); 
+                } else {
+                    loader.style.display = 'none';
+                }
+            }
         });
     </script>
 </body>
