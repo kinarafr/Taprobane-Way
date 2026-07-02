@@ -340,6 +340,55 @@
     });
 })();
 
+// Helper to play the entering green wall animation (slides up and away to reveal the page)
+function playEnteringAnimationForOverlay(transitionOverlay) {
+    if (!transitionOverlay) return;
+
+    // Temporarily disable transitions to swap positioning classes instantly
+    transitionOverlay.style.transition = 'none';
+    transitionOverlay.classList.remove('active', 'entering-active');
+    transitionOverlay.classList.add('entering');
+    
+    // Force browser reflow to apply the positioning reset instantly
+    void transitionOverlay.offsetHeight;
+    
+    // Restore transitions for the slide-up animation
+    transitionOverlay.style.transition = '';
+    
+    // Unhide body now that overlay is covering it
+    document.documentElement.classList.remove('page-is-transitioning');
+    
+    // Hide existing page loader since we handle transition
+    const existingLoader = document.getElementById('page-loader');
+    if (existingLoader) {
+        existingLoader.style.display = 'none';
+    }
+
+    // Start animation to slide up
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            transitionOverlay.classList.add('entering-active');
+            setTimeout(() => {
+                transitionOverlay.classList.remove('entering', 'entering-active');
+            }, 1000); // 1s animation
+        });
+    });
+}
+
+// Global listener for pageshow to handle bfcache (back-forward cache) restores reliably across browsers (including Safari)
+window.addEventListener('pageshow', (event) => {
+    const transitionOverlay = document.getElementById('page-transition');
+    if (transitionOverlay) {
+        // If restored from cache OR if the overlay is stuck in active state (e.g. from leaving the page)
+        if (event.persisted || transitionOverlay.classList.contains('active')) {
+            // Small delay to ensure the browser has completed cache restoration and is ready to animate
+            setTimeout(() => {
+                playEnteringAnimationForOverlay(transitionOverlay);
+            }, 50);
+        }
+    }
+});
+
 // Page Transition Logic
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Create and inject the transition overlay
@@ -352,31 +401,16 @@ document.addEventListener('DOMContentLoaded', () => {
     transitionOverlay.appendChild(lionImg);
     document.body.appendChild(transitionOverlay);
 
-    // 2. Check if we are entering a new page from a transition
+    // 2. Check if we are entering a new page from a transition or back/forward navigation
     const isTransitioning = sessionStorage.getItem('pageTransition');
-    if (isTransitioning === 'true') {
-        sessionStorage.removeItem('pageTransition');
-        // Instantly cover screen
-        transitionOverlay.classList.add('entering');
-        
-        // Unhide body now that overlay is covering it
-        document.documentElement.classList.remove('page-is-transitioning');
-        
-        // Hide existing page loader since we handle transition
-        const existingLoader = document.getElementById('page-loader');
-        if (existingLoader) {
-            existingLoader.style.display = 'none';
-        }
+    const navEntries = window.performance && window.performance.getEntriesByType && window.performance.getEntriesByType("navigation");
+    const isBackForward = navEntries && navEntries[0] && navEntries[0].type === 'back_forward';
 
-        // Start animation to slide up
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                transitionOverlay.classList.add('entering-active');
-                setTimeout(() => {
-                    transitionOverlay.classList.remove('entering', 'entering-active');
-                }, 1000); // 1s animation
-            });
-        });
+    if (isTransitioning === 'true' || isBackForward) {
+        if (isTransitioning === 'true') {
+            sessionStorage.removeItem('pageTransition');
+        }
+        playEnteringAnimationForOverlay(transitionOverlay);
     }
 
     // 3. Intercept link clicks
