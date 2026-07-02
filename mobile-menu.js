@@ -339,3 +339,78 @@
         }
     });
 })();
+
+// Page Transition Logic
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Create and inject the transition overlay
+    const transitionOverlay = document.createElement('div');
+    transitionOverlay.id = 'page-transition';
+    const lionImg = document.createElement('img');
+    lionImg.src = 'Images/Lion logo/Untitled.svg';
+    // Make the lion white to contrast with the green background
+    lionImg.style.filter = 'brightness(0) invert(1)';
+    transitionOverlay.appendChild(lionImg);
+    document.body.appendChild(transitionOverlay);
+
+    // 2. Check if we are entering a new page from a transition
+    const isTransitioning = sessionStorage.getItem('pageTransition');
+    if (isTransitioning === 'true') {
+        sessionStorage.removeItem('pageTransition');
+        // Instantly cover screen
+        transitionOverlay.classList.add('entering');
+        
+        // Unhide body now that overlay is covering it
+        document.documentElement.classList.remove('page-is-transitioning');
+        
+        // Hide existing page loader since we handle transition
+        const existingLoader = document.getElementById('page-loader');
+        if (existingLoader) {
+            existingLoader.style.display = 'none';
+        }
+
+        // Start animation to slide up
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                transitionOverlay.classList.add('entering-active');
+                setTimeout(() => {
+                    transitionOverlay.classList.remove('entering', 'entering-active');
+                }, 1000); // 1s animation
+            });
+        });
+    }
+
+    // 3. Intercept link clicks
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            const target = this.getAttribute('target');
+            
+            // Allow default behavior for external links, anchor links, target="_blank", mailto, tel
+            if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || target === '_blank') {
+                return;
+            }
+
+            // Also check if same origin
+            try {
+                const url = new URL(href, window.location.href);
+                if (url.origin !== window.location.origin) return;
+            } catch (err) {
+                return;
+            }
+
+            // Prevent default navigation
+            e.preventDefault();
+
+            // Set session storage flag
+            sessionStorage.setItem('pageTransition', 'true');
+
+            // Start fill animation
+            transitionOverlay.classList.add('active');
+
+            // Navigate after 1s
+            setTimeout(() => {
+                window.location.href = href;
+            }, 1000);
+        });
+    });
+});

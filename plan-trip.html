@@ -13,6 +13,11 @@
     <link href="aos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
+<script>
+        if (sessionStorage.getItem('pageTransition') === 'true') {
+            document.documentElement.classList.add('page-is-transitioning');
+        }
+    </script>
 </head>
 
 <body>
@@ -688,3 +693,4 @@
 </body>
 
 </html>
+

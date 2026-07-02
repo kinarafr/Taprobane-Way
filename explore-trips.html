@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="aos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+<script>
+        if (sessionStorage.getItem('pageTransition') === 'true') {
+            document.documentElement.classList.add('page-is-transitioning');
+        }
+    </script>
 </head>
 
 <body>

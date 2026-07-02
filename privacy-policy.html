@@ -12,6 +12,11 @@
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="aos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+<script>
+        if (sessionStorage.getItem('pageTransition') === 'true') {
+            document.documentElement.classList.add('page-is-transitioning');
+        }
+    </script>
 </head>
 
 <body>
@@ -251,3 +256,4 @@
 </body>
 
 </html>
+
