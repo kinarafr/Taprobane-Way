@@ -8,7 +8,7 @@ Taprobane Way is a premium, content-driven travel exploration website and intera
 
 The primary objective of **Taprobane Way** is to bridge the gap between curious global travelers and local Sri Lankan tourism. The website serves two primary purposes-
 
-1. **Travel Discovery & Inspiration**: Provides a highly visual, immersive browsing experience that explains the essence of Sri Lanka—its golden coastlines, misty tea countries, ancient cultural monuments, and exotic wildlife.
+1. **Travel Discovery & Inspiration**: Provides a highly visual, immersive browsing experience that explains the essence of Sri Lanka—its golden coastlines, misty tea countries, ancient cultural monuments, and exotic wildlife. 
 2. **Pre-Made & Tailored Trip Facilitation**: Showcases pre-made travel packages designed by Sri Lankan travel agencies, while providing a self-service interactive trip planning tool that generates custom itineraries and connects travelers directly with agencies for booking.
 
 ---
