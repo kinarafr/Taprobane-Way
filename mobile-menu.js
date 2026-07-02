@@ -249,5 +249,93 @@
                 }, 600);
             }
         }, true);
+
+        // Back to Top Button
+        const backToTopBtn = document.createElement('button');
+        backToTopBtn.id = 'back-to-top';
+        backToTopBtn.className = 'back-to-top-btn';
+        backToTopBtn.setAttribute('aria-label', 'Back to top');
+        backToTopBtn.innerHTML = `
+            <svg class="back-to-top-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5"></line>
+                <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+        `;
+        document.body.appendChild(backToTopBtn);
+
+        // Toggle visibility of the back-to-top button on scroll
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        // Scroll to top and animate on click
+        backToTopBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            backToTopBtn.classList.add('clicked');
+            setTimeout(function () {
+                backToTopBtn.classList.remove('clicked');
+            }, 600);
+        });
+
+        // Scroll Progress Bar (Only visible on specific article pages)
+        const targetPages = [
+            'ella.html',
+            'galle.html',
+            'kandy.html',
+            'eco-tourism-sinharaja.html',
+            'surfing-arugam-bay.html',
+            'mirissa-bay.html',
+            'ayurvedic-wellness.html',
+            'heritage-loop.html',
+            'southern-sunsets.html',
+            'privacy-policy.html',
+            'terms-of-service.html',
+            'visa-info.html',
+            'best-time-to-visit.html',
+            'getting-around.html'
+        ];
+
+        const path = window.location.pathname;
+        const pageName = path.split('/').pop().toLowerCase();
+
+        // Check if the current page matches or is one of the target pages
+        const isArticlePage = targetPages.some(page => {
+            const cleanPage = page.replace('.html', '');
+            return pageName === page || pageName.includes(cleanPage) || (pageName === '' && page === 'index.html');
+        });
+
+        if (isArticlePage) {
+            const progressContainer = document.createElement('div');
+            progressContainer.className = 'scroll-progress-container';
+            
+            const progressFill = document.createElement('div');
+            progressFill.className = 'scroll-progress-fill';
+            
+            progressContainer.appendChild(progressFill);
+            document.body.appendChild(progressContainer);
+
+            const updateProgressBar = function () {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                if (scrollHeight > 0) {
+                    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+                    progressFill.style.width = `${scrollPercentage}%`;
+                } else {
+                    progressFill.style.width = '0%';
+                }
+            };
+
+            window.addEventListener('scroll', updateProgressBar);
+            // Run initially in case page is already scrolled
+            updateProgressBar();
+        }
     });
 })();

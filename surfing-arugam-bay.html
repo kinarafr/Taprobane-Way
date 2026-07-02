@@ -74,13 +74,13 @@
 
     <!-- Article Hero Banner with Slideshow -->
     <section class="article-hero" aria-label="Arugam Bay Surfing Hero Slideshow" id="hero-slideshow-container">
-        <!-- Hero Slides background (gray placeholders) -->
+        <!-- Hero Slides background -->
         <div class="article-hero-slides">
-            <div class="article-hero-slide active" style="background-color: #6b7280;"
+            <div class="article-hero-slide active" style="background-image: url('Images/Arugam Bay/Arugam Bay 1.jpg');"
                 data-index="0"></div>
-            <div class="article-hero-slide" style="background-color: #4b5563;"
+            <div class="article-hero-slide" style="background-image: url('Images/Arugam Bay/Arugam Bay 2.webp');"
                 data-index="1"></div>
-            <div class="article-hero-slide" style="background-color: #374151;"
+            <div class="article-hero-slide" style="background-image: url('Images/Arugam Bay/Arugam Bay 3.jpeg');"
                 data-index="2"></div>
         </div>
 
@@ -280,19 +280,23 @@
             <div class="gallery-grid">
                 <!-- Main Surf (Wide) -->
                 <div class="gallery-item gallery-item-1" data-aos="zoom-in" id="gallery-img-1">
-                    <div style="width: 100%; height: 100%; background-color: #9ca3af; display: flex; align-items: center; justify-content: center; border-radius: inherit; color: #fff; font-size: 0.9rem; font-weight: 600;">The Main Point Break</div>
+                    <img src="Images/Arugam Bay/Arugam Bay main point break.png"
+                        alt="A surfer riding a long peeling wave at the Main Point in Arugam Bay.">
                 </div>
                 <!-- Sunset Surf (Tall) -->
                 <div class="gallery-item gallery-item-2" data-aos="zoom-in" data-aos-delay="100" id="gallery-img-2">
-                    <div style="width: 100%; height: 100%; background-color: #6b7280; display: flex; align-items: center; justify-content: center; border-radius: inherit; color: #fff; font-size: 0.9rem; font-weight: 600;">Sunset Session</div>
+                    <img src="Images/Arugam Bay/Arugam Bay sunset.webp"
+                        alt="Golden sunset over the ocean at Arugam Bay with palm trees silhouette.">
                 </div>
                 <!-- Beach Life (Square) -->
                 <div class="gallery-item gallery-item-3" data-aos="zoom-in" id="gallery-img-3">
-                    <div style="width: 100%; height: 100%; background-color: #4b5563; display: flex; align-items: center; justify-content: center; border-radius: inherit; color: #fff; font-size: 0.9rem; font-weight: 600;">Beach Vibes</div>
+                    <img src="Images/Arugam Bay/Arugam Bay beach vibes.jpg"
+                        alt="Hammocks and surfboards at a beachside cafe in Arugam Bay.">
                 </div>
                 <!-- Whiskey Point (Wide) -->
                 <div class="gallery-item gallery-item-4" data-aos="zoom-in" data-aos-delay="100" id="gallery-img-4">
-                    <div style="width: 100%; height: 100%; background-color: #374151; display: flex; align-items: center; justify-content: center; border-radius: inherit; color: #fff; font-size: 0.9rem; font-weight: 600;">Whiskey Point Barrels</div>
+                    <img src="Images/Arugam Bay/Arugam Bay Whiskey point.webp"
+                        alt="Waves breaking at Whiskey Point in Arugam Bay under a clear blue sky.">
                 </div>
             </div>
         </div>
@@ -397,6 +401,74 @@
                     showSlide(slideIndex);
                     slideInterval = setInterval(nextSlide, 5000);
                 });
+            });
+
+            // Lightbox Gallery Logic
+            const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item img');
+            const lightbox = document.getElementById('gallery-lightbox-modal');
+            const lightboxImg = document.getElementById('lightbox-active-img');
+            const lightboxCaption = document.getElementById('lightbox-active-caption');
+            const closeBtn = document.getElementById('lightbox-close-btn');
+            const prevBtn = document.getElementById('lightbox-prev-btn');
+            const nextBtn = document.getElementById('lightbox-next-btn');
+
+            let activeGalleryIndex = 0;
+
+            function openLightbox(index) {
+                activeGalleryIndex = index;
+                const img = galleryItems[index];
+                lightboxImg.src = img.src;
+                lightboxCaption.textContent = img.alt;
+                lightbox.classList.add('active');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden'; // Disable scroll behind lightbox
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = ''; // Re-enable scroll
+            }
+
+            function prevImage() {
+                let prevIndex = (activeGalleryIndex - 1 + galleryItems.length) % galleryItems.length;
+                openLightbox(prevIndex);
+            }
+
+            function nextImage() {
+                let nextIndex = (activeGalleryIndex + 1) % galleryItems.length;
+                openLightbox(nextIndex);
+            }
+
+            // Event listeners for gallery items
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', function () {
+                    openLightbox(index);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            prevBtn.addEventListener('click', prevImage);
+            nextBtn.addEventListener('click', nextImage);
+
+            // Close lightbox on click outside the image wrapper
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function (e) {
+                if (!lightbox.classList.contains('active')) return;
+
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    prevImage();
+                } else if (e.key === 'ArrowRight') {
+                    nextImage();
+                }
             });
         });
     </script>
