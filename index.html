@@ -75,8 +75,7 @@
         <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
         <div class="container position-relative z-2 text-white px-3">
-            <h1 class="hero-title fw-bold mb-4" id="interactive-hero-title" data-aos="fade-up">Discover the Pearl
-                of<br>the Indian Ocean</h1>
+            <h1 class="hero-title fw-bold mb-4" id="interactive-hero-title" data-aos="fade-up">Discover the Pearl of<br>the Indian Ocean</h1>
             <p class="hero-subtitle mb-5" data-aos="fade-up" data-aos-delay="100">Experience the raw beauty and serene
                 adventure of Sri Lanka.</p>
 
@@ -200,7 +199,7 @@
                 <div class="col-md-6" data-aos="fade-up">
                     <a href="eco-tourism-sinharaja.html" class="trending-card d-block text-decoration-none">
                         <div class="trending-card-image-wrapper">
-                            <img src="Images/home/Eco_tourism.png" alt="Eco-tourism in Sinharaja">
+                            <video src="Images/home/Echo Tourism.mp4" loop muted playsinline></video>
                         </div>
                         <h4 class="fw-bold mb-2">Eco-tourism in Sinharaja</h4>
                         <p class="text-secondary" style="font-size: 0.95rem;">Immerse yourself in the biodiversity of
@@ -210,7 +209,7 @@
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="surfing-arugam-bay.html" class="trending-card d-block text-decoration-none">
                         <div class="trending-card-image-wrapper">
-                            <img src="Images/home/Surfing_Arugambay.png" alt="Surfing in Arugam Bay">
+                            <video src="Images/home/Surfing_Arugambay.mp4" loop muted playsinline></video>
                         </div>
                         <h4 class="fw-bold mb-2">Surfing in Arugam Bay</h4>
                         <p class="text-secondary" style="font-size: 0.95rem;">Catch the perfect wave at one of the
@@ -543,6 +542,20 @@
                 } else {
                     // Fallback to searching where-to-go page
                     window.location.href = "where-to-go.html";
+                }
+            });
+
+            // Play/pause trending card videos on hover
+            const trendingCards = document.querySelectorAll('.trending-card');
+            trendingCards.forEach(card => {
+                const video = card.querySelector('video');
+                if (video) {
+                    card.addEventListener('mouseenter', () => {
+                        video.play().catch(() => {});
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        video.pause();
+                    });
                 }
             });
         });
